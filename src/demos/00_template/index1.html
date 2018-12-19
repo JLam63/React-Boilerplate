@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+    <div id="example"></div>
+
+    <script type="text/babel">
+    
+    var John = React.createClass({       
+        getInitialState: function(){
+            return {}
+        },
+        
+        add: function(){
+                alert('You clicked me!');
+        },
+
+        subtract: function(){
+
+        },
+
+        render: function(){
+            return (<div>
+                <button onClick={this.add} >Click Me! {this.props.attr1} {this.props.children}</button>
+            </div>)
+        }
+    });
+
+    ReactDOM.render(<div><John attr1="cat" attr2="dog">some text</John></div>, document.getElementById('example'));
+    
+    
+    </script>
+    
+</body>
+</html>
